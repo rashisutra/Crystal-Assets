@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Sandhya Gems Corner - Hyderabad"
+version = "1.0.0"
+id = "artifacts/sandhya-gems"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18349
+
+[services.development]
+run = "pnpm --filter @workspace/sandhya-gems run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/sandhya-gems", "run", "build" ]
+publicDir = "artifacts/sandhya-gems/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18349"
+BASE_PATH = "/"
