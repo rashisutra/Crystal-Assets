@@ -117,13 +117,16 @@ img{display:block;max-width:100%}
 .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.25);padding:13px 26px;border-radius:50px;font-size:15px;font-weight:500;text-decoration:none;transition:all .2s;display:inline-block}
 .btn-ghost:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.4)}
 
-/* hero right mini grid */
+/* hero right mini grid (desktop) */
 .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .hc{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:14px;text-align:center;transition:transform .2s}
 .hc:hover{transform:translateY(-3px)}
 .hc-img{width:56px;height:56px;border-radius:50%;object-fit:cover;margin:0 auto 8px;border:2px solid rgba(196,153,58,.2)}
 .hc h4{font-family:'Cormorant Garamond',serif;font-size:14px;color:#fff;margin-bottom:2px}
 .hc p{font-size:11px;color:rgba(255,255,255,.45)}
+
+/* hero crystal scroll strip (mobile only) */
+.hero-scroll{display:none}
 
 /* TRUST BAR */
 .trust{background:var(--forest);padding:14px 40px;display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
@@ -225,6 +228,14 @@ footer strong{color:rgba(255,255,255,.8)}
   .hero-inner{grid-template-columns:1fr;gap:0;padding:48px 22px}
   .hero-grid{display:none}
 
+  /* Mobile crystal scroll strip */
+  .hero-scroll{display:flex;gap:14px;overflow-x:auto;padding:22px 0 6px;margin-top:22px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .hero-scroll::-webkit-scrollbar{display:none}
+  .hsc{flex:0 0 76px;text-align:center}
+  .hsc-img{width:56px;height:56px;border-radius:50%;object-fit:cover;margin:0 auto 6px;border:2px solid rgba(196,153,58,.28)}
+  .hsc h4{font-family:'Cormorant Garamond',serif;font-size:12px;color:rgba(255,255,255,.9);line-height:1.2}
+  .hsc p{font-size:10px;color:rgba(255,255,255,.4);margin-top:2px}
+
   /* Trust bar — stack in two columns */
   .trust{gap:10px 20px;padding:16px 22px;justify-content:flex-start}
   .ti{font-size:11px;flex:0 0 calc(50% - 10px)}
@@ -288,6 +299,33 @@ footer strong{color:rgba(255,255,255,.8)}
       <div class="cta-row">
         <a href="#quiz" class="btn-gold">Find my lucky crystal</a>
         <a href="#products" class="btn-ghost">Shop all bracelets</a>
+      </div>
+      <!-- Mobile-only horizontal crystal scroll strip -->
+      <div class="hero-scroll">
+        <div class="hsc">
+          <img class="hsc-img" src="https://sandhyagems.in/cdn/shop/files/Natural_Certified_Amethyst_Bracelet.jpg?width=120&height=120&crop=center&v=1754054662" alt="Amethyst bracelet" loading="lazy">
+          <h4>Amethyst</h4><p>Peace</p>
+        </div>
+        <div class="hsc">
+          <img class="hsc-img" src="https://sandhyagems.in/cdn/shop/files/Natural_Rose_Quartz_Crystal_Bracelet.png?width=120&height=120&crop=center&v=1754054663" alt="Rose Quartz bracelet" loading="lazy">
+          <h4>Rose Quartz</h4><p>Love</p>
+        </div>
+        <div class="hsc">
+          <img class="hsc-img" src="https://sandhyagems.in/cdn/shop/files/Natural_Crystal_Money_Magnet_Bracelet.png?width=120&height=120&crop=center&v=1771061520" alt="Money Magnet bracelet" loading="lazy">
+          <h4>Money Magnet</h4><p>Wealth</p>
+        </div>
+        <div class="hsc">
+          <img class="hsc-img" src="https://sandhyagems.in/cdn/shop/files/Product1_MoneyMagnet_NoNazarEvilEye__page-0005.jpg?width=120&height=120&crop=center&v=1771070099" alt="Black Tourmaline bracelet" loading="lazy">
+          <h4>Tourmaline</h4><p>Protection</p>
+        </div>
+        <div class="hsc">
+          <img class="hsc-img" src="https://sandhyagems.in/cdn/shop/files/Certified_Natural_Green_Aventurine_Bracelet.jpg?width=120&height=120&crop=center&v=1754054668" alt="Aventurine bracelet" loading="lazy">
+          <h4>Aventurine</h4><p>Growth</p>
+        </div>
+        <div class="hsc">
+          <img class="hsc-img" src="https://sandhyagems.in/cdn/shop/files/Natural_Lava_Stone_Healing_Bracelet.png?width=120&height=120&crop=center&v=1754054659" alt="Lava Stone bracelet" loading="lazy">
+          <h4>Lava Stone</h4><p>Grounding</p>
+        </div>
       </div>
     </div>
     <div class="hero-grid">
@@ -399,6 +437,38 @@ footer strong{color:rgba(255,255,255,.8)}
       <p class="ss">All 100% natural and certified. Handcrafted bracelets shipped across Hyderabad in 2–4 days.</p>
     </div>
     <div class="pgrid">
+
+      <a class="pc" href="https://sandhyagems.in/collections/best-gemstone-bracelets-online/products/wealth-protection-set-power-trio" target="_blank">
+        <div class="pimg">
+          <img src="https://sandhyagems.in/cdn/shop/files/combain.png?width=400&height=400&crop=center&v=1771074198" alt="Power Trio Crystal Set Hyderabad" loading="lazy">
+          <span class="pbadge">Best Value</span>
+          <span class="pdiscount">-52%</span>
+        </div>
+        <div class="pbody">
+          <div class="pname">Ultimate Power Trio Set</div>
+          <div class="pbenefit">Money Magnet + Tourmaline + Lucky Stone — the complete kit</div>
+          <div class="pfooter">
+            <div class="pprice"><span class="pprice-now">₹999</span><span class="pprice-was">₹2,099</span></div>
+            <span class="pbtn">Buy Now</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="pc" href="https://sandhyagems.in/collections/best-gemstone-bracelets-online/products/crystal-protection-bracelets-combo" target="_blank">
+        <div class="pimg">
+          <img src="https://sandhyagems.in/cdn/shop/files/Product_1_Money_Magnet_No_Nazar_Evil_Eye__page-0001.jpg?width=400&height=400&crop=center&v=1771070278" alt="Prosperity Protection Combo Hyderabad" loading="lazy">
+          <span class="pbadge">Combo Offer</span>
+          <span class="pdiscount">-63%</span>
+        </div>
+        <div class="pbody">
+          <div class="pname">Prosperity &amp; Protection Combo</div>
+          <div class="pbenefit">Dhan Yog Money Magnet + Tourmaline Nazar — attract &amp; protect</div>
+          <div class="pfooter">
+            <div class="pprice"><span class="pprice-now">₹1,499</span><span class="pprice-was">₹4,099</span></div>
+            <span class="pbtn">Buy Now</span>
+          </div>
+        </div>
+      </a>
 
       <a class="pc" href="https://sandhyagems.in/collections/best-gemstone-bracelets-online/products/amethyst-bracelet-online" target="_blank">
         <div class="pimg">
@@ -560,37 +630,6 @@ footer strong{color:rgba(255,255,255,.8)}
         </div>
       </a>
 
-      <a class="pc" href="https://sandhyagems.in/collections/best-gemstone-bracelets-online/products/wealth-protection-set-power-trio" target="_blank">
-        <div class="pimg">
-          <img src="https://sandhyagems.in/cdn/shop/files/combain.png?width=400&height=400&crop=center&v=1771074198" alt="Power Trio Crystal Set Hyderabad" loading="lazy">
-          <span class="pbadge">Best Value</span>
-          <span class="pdiscount">-52%</span>
-        </div>
-        <div class="pbody">
-          <div class="pname">Ultimate Power Trio Set</div>
-          <div class="pbenefit">Money Magnet + Tourmaline + Lucky Stone — the complete kit</div>
-          <div class="pfooter">
-            <div class="pprice"><span class="pprice-now">₹999</span><span class="pprice-was">₹2,099</span></div>
-            <span class="pbtn">Buy Now</span>
-          </div>
-        </div>
-      </a>
-
-      <a class="pc" href="https://sandhyagems.in/collections/best-gemstone-bracelets-online/products/crystal-protection-bracelets-combo" target="_blank">
-        <div class="pimg">
-          <img src="https://sandhyagems.in/cdn/shop/files/Product_1_Money_Magnet_No_Nazar_Evil_Eye__page-0001.jpg?width=400&height=400&crop=center&v=1771070278" alt="Prosperity Protection Combo Hyderabad" loading="lazy">
-          <span class="pbadge">Combo Offer</span>
-          <span class="pdiscount">-63%</span>
-        </div>
-        <div class="pbody">
-          <div class="pname">Prosperity &amp; Protection Combo</div>
-          <div class="pbenefit">Dhan Yog Money Magnet + Tourmaline Nazar — attract &amp; protect</div>
-          <div class="pfooter">
-            <div class="pprice"><span class="pprice-now">₹1,499</span><span class="pprice-was">₹4,099</span></div>
-            <span class="pbtn">Buy Now</span>
-          </div>
-        </div>
-      </a>
 
     </div>
   </div>
