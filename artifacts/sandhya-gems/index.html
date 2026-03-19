@@ -13,7 +13,70 @@
 <meta property="og:description" content="Certified natural crystal bracelets. Find your lucky crystal free. Delivery across Hyderabad.">
 <meta property="og:url" content="https://hyderabad.sandhyagems.in/">
 <meta property="og:type" content="website">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Store","name":"Sandhya Gems Corner","description":"Certified natural healing crystal bracelets","url":"https://hyderabad.sandhyagems.in","areaServed":"Hyderabad","priceRange":"₹499-₹1499","sameAs":["https://sandhyagems.in"]}</script>
+<meta property="og:image" content="https://sandhyagems.in/cdn/shop/files/Natural_Certified_Amethyst_Bracelet.jpg?width=1200&height=630&crop=center&v=1754054662">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_IN">
+<meta property="og:site_name" content="Sandhya Gems Corner">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Healing Crystal Bracelets in Hyderabad | Sandhya Gems Corner">
+<meta name="twitter:description" content="Certified natural crystal bracelets. Find your lucky crystal free. Delivery across Hyderabad.">
+<meta name="twitter:image" content="https://sandhyagems.in/cdn/shop/files/Natural_Certified_Amethyst_Bracelet.jpg?width=1200&height=630&crop=center&v=1754054662">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#0a1f12">
+<meta name="author" content="Sandhya Gems Corner">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Store",
+      "name": "Sandhya Gems Corner",
+      "description": "Certified natural healing crystal bracelets",
+      "url": "https://hyderabad.sandhyagems.in",
+      "telephone": "+91-9876543210",
+      "areaServed": "Hyderabad",
+      "priceRange": "₹499-₹1499",
+      "image": "https://sandhyagems.in/cdn/shop/files/Natural_Certified_Amethyst_Bracelet.jpg",
+      "sameAs": ["https://sandhyagems.in"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "addressCountry": "IN"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Crystal Bracelets",
+        "itemListElement": [
+          {"@type":"Offer","itemOffered":{"@type":"Product","name":"Natural Amethyst Bracelet","description":"Calms anxiety, boosts intuition, promotes deep sleep"},"price":"525","priceCurrency":"INR"},
+          {"@type":"Offer","itemOffered":{"@type":"Product","name":"Rose Quartz Bracelet","description":"Attracts love, heals emotional wounds, self-love"},"price":"499","priceCurrency":"INR"},
+          {"@type":"Offer","itemOffered":{"@type":"Product","name":"Money Magnet Bracelet","description":"Attracts wealth, business growth, financial abundance"},"price":"659","priceCurrency":"INR"},
+          {"@type":"Offer","itemOffered":{"@type":"Product","name":"Black Tourmaline Nazar Bracelet","description":"Blocks negativity, evil eye protection, grounding energy"},"price":"799","priceCurrency":"INR"}
+        ]
+      }
+    },
+    {
+      "@type": "WebPage",
+      "url": "https://hyderabad.sandhyagems.in/",
+      "name": "Buy Healing Crystal Bracelets in Hyderabad | Sandhya Gems Corner",
+      "description": "Buy certified natural healing crystal bracelets in Hyderabad. Amethyst, Rose Quartz, Money Magnet, Black Tourmaline & more. Free lucky crystal quiz. Starts ₹499.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{"@type":"ListItem","position":1,"name":"Home","item":"https://hyderabad.sandhyagems.in/"}]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"Do you deliver healing crystals in Hyderabad?","acceptedAnswer":{"@type":"Answer","text":"Yes, we deliver certified natural crystal bracelets pan-Hyderabad in 2–4 days including Banjara Hills, Jubilee Hills, Gachibowli, HITEC City and all areas."}},
+        {"@type":"Question","name":"Are your crystals certified?","acceptedAnswer":{"@type":"Answer","text":"Yes, every bracelet comes with a certificate of authenticity. We use 100% natural stones — no synthetic or lab-grown crystals ever."}},
+        {"@type":"Question","name":"What is the starting price for crystal bracelets?","acceptedAnswer":{"@type":"Answer","text":"Crystal bracelets start at ₹499. We have options from ₹499 to ₹1,499 for individual bracelets and combo sets up to ₹1,499."}}
+      ]
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -157,16 +220,50 @@ footer strong{color:rgba(255,255,255,.8)}
 
 /* RESPONSIVE */
 @media(max-width:768px){
-  .hero-inner{grid-template-columns:1fr;gap:36px;padding:56px 22px}
+  /* Hero */
+  .hero{min-height:75vh}
+  .hero-inner{grid-template-columns:1fr;gap:0;padding:48px 22px}
   .hero-grid{display:none}
-  .sec{padding:56px 22px}
-  .quiz-sec{padding:56px 22px}
-  .qbox{padding:22px}
+
+  /* Trust bar — stack in two columns */
+  .trust{gap:10px 20px;padding:16px 22px;justify-content:flex-start}
+  .ti{font-size:11px;flex:0 0 calc(50% - 10px)}
+
+  /* Sections */
+  .sec{padding:48px 22px}
+  .quiz-sec{padding:48px 22px}
+  .qbox{padding:20px}
+
+  /* Quiz goal grid — 1 column on small screens */
   .gg{grid-template-columns:1fr}
-  .trust{gap:16px;padding:14px 22px}
-  .rband{padding:48px 22px}
+
+  /* Why grid — 1 column */
+  .wgrid{grid-template-columns:1fr}
+
+  /* Product grid — 2 columns on mobile */
+  .pgrid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .pimg{height:150px}
+  .pbody{padding:12px}
+  .pname{font-size:1rem}
+  .pbenefit{font-size:11px;margin-bottom:8px}
+  .pprice-now{font-size:.95rem}
+  .pbtn{padding:6px 10px;font-size:11px}
+
+  /* Bands */
+  .rband{padding:44px 22px}
   footer{padding:28px 22px}
-  .wa{bottom:14px;right:14px;padding:10px 14px 10px 12px;font-size:13px}
+
+  /* WhatsApp button — smaller, clear of safe area */
+  .wa{bottom:16px;right:16px;padding:10px 14px 10px 12px;font-size:13px}
+
+  /* Ensure content above footer has space for fixed WA button */
+  footer{padding-bottom:80px}
+}
+
+@media(max-width:480px){
+  /* Single column products on very small screens */
+  .pgrid{grid-template-columns:1fr}
+  .pimg{height:200px}
 }
 </style>
 </head>
