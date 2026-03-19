@@ -402,7 +402,7 @@ footer strong{color:rgba(255,255,255,.8)}
       <div class="qstep" id="s2">
         <div class="ql">Step 2 of 3</div>
         <div class="qq">When were you born?</div>
-        <input type="date" class="qi" id="qdob" max="">
+        <input type="text" class="qi" id="qdob" placeholder="DD / MM / YYYY" maxlength="10" inputmode="numeric" autocomplete="off">
         <div class="qnav"><button class="btn-back" onclick="go(1)">← Back</button><button class="btn-qnext" onclick="go(3)">Continue →</button></div>
       </div>
 
@@ -783,7 +783,8 @@ const crystals={
 };
 
 function zodiac(dob){
-  const d=new Date(dob),m=d.getMonth()+1,day=d.getDate();
+  const parts=dob.replace(/\s/g,'').split('/');
+  const day=parseInt(parts[0],10),m=parseInt(parts[1],10);
   if((m==3&&day>=21)||(m==4&&day<=19))return'Aries';
   if((m==4&&day>=20)||(m==5&&day<=20))return'Taurus';
   if((m==5&&day>=21)||(m==6&&day<=20))return'Gemini';
@@ -799,11 +800,24 @@ function zodiac(dob){
 }
 
 let uName='',uGoal=null;
-document.getElementById('qdob').max=new Date().toISOString().split('T')[0];
+
+document.getElementById('qdob').addEventListener('input',function(){
+  let v=this.value.replace(/\D/g,'');
+  if(v.length>2)v=v.slice(0,2)+'/'+v.slice(2);
+  if(v.length>5)v=v.slice(0,5)+'/'+v.slice(5,9);
+  this.value=v;
+});
+
+function dobValid(v){
+  const p=v.replace(/\s/g,'').split('/');
+  if(p.length!==3)return false;
+  const d=parseInt(p[0],10),m=parseInt(p[1],10),y=parseInt(p[2],10);
+  return d>=1&&d<=31&&m>=1&&m<=12&&y>=1900&&y<=new Date().getFullYear();
+}
 
 function go(n){
   if(n==2){const v=document.getElementById('qname').value.trim();if(!v){document.getElementById('qname').focus();return;}uName=v;document.getElementById('s3q').textContent=uName+', what do you want to attract?';}
-  if(n==3&&!document.getElementById('qdob').value){document.getElementById('qdob').focus();return;}
+  if(n==3&&!dobValid(document.getElementById('qdob').value)){document.getElementById('qdob').focus();return;}
   document.querySelectorAll('.qstep').forEach(s=>s.classList.remove('active'));
   document.getElementById('s'+n).classList.add('active');
   for(let i=1;i<=3;i++)document.getElementById('p'+i).classList.toggle('on',i<=n);
